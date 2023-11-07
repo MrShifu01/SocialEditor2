@@ -185,6 +185,38 @@ button {
 .panel {
     background-color: #2b363c;
     width: 350px;
+    padding: 15px 31px;
+}
+
+.panel__top {
+
+}
+
+.first-heading {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.panel__collapse-icon {
+
+}
+
+.panel__images {
+    padding: 25px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.panel__img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 7px;
+}
+
+.panel__upload-icon {
+
 }
 
 /*^ ------------MAIN------------- */

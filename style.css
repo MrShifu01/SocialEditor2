@@ -1,4 +1,4 @@
-/* RESET */
+/*^ RESET */
 * {
     margin: 0;
     padding: 0;
@@ -13,7 +13,7 @@ button {
     outline: none; /* Focus state visual */
 }
 
-/* KEYFRAMES */
+/*^ KEYFRAMES */
 @keyframes fade-in-from-top {
     0% {
         opacity: 0;
@@ -25,7 +25,18 @@ button {
     }
 }
 
-/* BASE STYLES */
+@keyframes fade-in-from-left {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/*^ BASE STYLES */
 .app {
     font-family: "Lato", sans-serif;
     font-size: 15px;
@@ -35,7 +46,12 @@ button {
     overflow: hidden;
 }
 
-/* STYLES */
+.app__container {
+    height: calc(100vh - 55px);
+    display: flex;
+}
+
+/*^ STYLES */
 .header {
     background-image: linear-gradient(to right, #18a0be, #622db9);
     height: 55px;
@@ -89,6 +105,90 @@ button {
 }
 
 .dd-toggle__text {
+
 }
 
+/*^ ------------SIDEBAR------------- */
+.sidebar {
+    background-color: #10171a;
+    width: 75px;
+    display: flex;
+    flex-direction: column;
+}
 
+.menu {
+
+}
+
+.menu__button {
+    padding: 19px 0;
+    color: rgba(255, 255, 255, 0.4);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    transition: all 0.5s;
+    animation: fade-in-from-left 0.5s;
+}
+
+.menu__button:hover {
+    background-color: #2b363b;
+    color: #fff;
+    cursor: pointer;
+}   
+
+.menu__button:focus {
+    background-color: #2b363b;
+    color: #fff;
+    cursor: pointer;
+}
+
+.menu__button--active {
+    background-color: #2b363b;
+    color: #fff;
+    position: relative;
+}
+
+.menu__button--active::before {
+    content: "";
+    width: 3px;
+    height: 100%;
+    background-color: #375bb6;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.menu__icon {
+    font-size: 18px;
+    margin-bottom: 3px;
+}
+
+.menu__text {
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.footer {
+    margin-top: auto;
+    margin-bottom: 60px;
+    transform: rotate(-90deg);
+}
+
+.copyright {
+    color: rgba(255, 255, 255, 0.15);
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+/*^ -------------PANEL------------ */
+.panel {
+    background-color: #2b363c;
+    width: 350px;
+}
+
+/*^ ------------MAIN------------- */
+.main {
+    background-color: #edf1f3;
+    flex: 1;
+}
